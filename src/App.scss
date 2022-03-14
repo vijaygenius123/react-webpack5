@@ -1,0 +1,26 @@
+$primaryColor: mediumpurple;
+$primaryTextColor: white;
+
+@mixin btn($bg: $primaryColor,$color: none) {
+  display: inline-block;
+  outline: $color;
+  background: $bg;
+  color: $primaryTextColor;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($bg, 10);
+  }
+
+}
+
+body {
+  background: wheat;
+}
+
+.btn {
+  @include btn();
+}
